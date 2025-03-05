@@ -1,39 +1,40 @@
-enum Weekday {monday, tuesday, wednesday, thursday, friday, saturday, sunday}
+enum Sex {male, female}
+enum AgeMale {r20t25, r25t30, r30t35}
+enum AgeFemale {r20t25, r25t30, r30t35}
+
 
 void main () {
-  Weekday? weekday;
 
-  // if (weekday == Weekday.monday || weekday == Weekday.tuesday) {
-  //   print('Mondays and Tuesdays are stressfull');
-  // } else if (weekday == Weekday.wednesday || weekday ==  Weekday.thursday) {
-  //   print('Wednesdays and Thursdays are ok');
-  // } else if (weekday == Weekday.friday) {
-  //   print('Fridays are awesome');
-  // } else if (weekday == Weekday.saturday || weekday == Weekday.sunday) {
-  //   print('Weekends are insanely good');
-  // } else {
-  //   print('No day has been chosen');
-  // }
+  Sex? sex;
+  AgeMale? ageMale;
+  AgeFemale? ageFemale;
 
-  switch (weekday) {
-
-    case Weekday.monday:   
-    case Weekday.tuesday:
-      print('Mondays and tuesdays are stressfull');
-    case Weekday.wednesday:
-    case Weekday.thursday:
-      print('Wednesdays and Thursdays are ok');
-    case Weekday.friday:
-      print('Fridays are awesome');
-    case Weekday.saturday:
-    case Weekday.sunday:
-      print('Weekends are insanely good');
-    case null:
-      print('No day has been chosen');
-  }
-
-// // // Ich finde, dass die Verwendung vom Switch Case besser ist.
-// // // Es ist schneller zu implemintieren und sieht sauberer aus.
+switch (sex) {
+   case Sex.male:
+     switch (ageMale) {
+       case AgeMale.r20t25:
+         print("Im Schnitt 181,4m");
+       case AgeMale.r25t30:
+         print("Im Schnitt 181,3m");
+       case AgeMale.r30t35:
+         print("Im Schnitt 180,4m");
+       default:
+         print('No age selected');
+     }
+   case Sex.female:
+     switch (ageFemale) {
+       case AgeFemale.r20t25:
+         print("Im Schnitt 167,5m");
+       case AgeFemale.r25t30:
+         print("Im Schnitt 167,3 m");
+       case AgeFemale.r30t35:
+         print("Im Schnitt 167,2");
+       default:
+         print('No age selected');
+     }
+  default:
+    print('No sex selected');
+ }
 
 }
 
