@@ -182,8 +182,17 @@ void main () {
       print('No Clan selected');
   }
 
+  String rating = '';
+  switch (strengthWarrior) {
+    case < 30:
+    rating = 'Suboptimal';
+    case > 30 && < 75:
+    rating = 'Optimal';
+    case > 75:
+    rating = 'Extreme';
+  }
 
-  print('The Warrior has the strength of $strengthWarrior in the stormy evenings. Suboptimal');
+  print('The Warrior has the strength of $strengthWarrior in the stormy evenings. $rating');
 
 }
 
