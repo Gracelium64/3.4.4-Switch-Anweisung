@@ -191,9 +191,31 @@ void main () {
     case > 75:
     rating = 'Extreme';
   }
+  String mood = '';
+  switch (weather) {
+    case Weather.sunny:
+      mood = 'sunny';
+    case Weather.rainy:
+      mood = 'rainy';
+    case Weather.stormy:
+      mood = 'stormy';
+  }
 
-  print('The Warrior has the strength of $strengthWarrior in the stormy evenings. $rating');
+  String time = '';
+  switch (timeOfDay) {
+    case TimeOfDay.morning:
+     time = 'mornings';
+    case TimeOfDay.noon:
+      time = 'middays';
+    case TimeOfDay.evening:
+      time = 'evenings';
+    case TimeOfDay.night:
+      time = 'nights';
+  }
 
+
+  print('The Warrior has the strength of $strengthWarrior in the $mood $time. $rating');
+  
 }
 
 
