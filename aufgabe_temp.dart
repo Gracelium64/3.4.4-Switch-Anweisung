@@ -41,7 +41,7 @@ cleanList = new List<double>.from(temperaturDaten);
 
 print('Cleaned up $temperaturDaten');
 print('New list $cleanList');
-print('Average calculated ${(cleanList.reduce((value, element) => value + element) / cleanList.length).toStringAsPrecision(4)}');
+print('Average calculated ${(cleanList.reduce((value, element) => value + element) / cleanList.length).toStringAsPrecision(4)}°C');
 
   // Am Ende soll die Durchschnittstemperatur ausgegeben werden, z.B.:
   // print('Die Durchschnittstemperatur beträgt: $durchschnitt °C');
